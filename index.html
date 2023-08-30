@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licznik tempa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Licznik tempa</h1>
+            <p class="description">Oblicz jak wszybko musisz biec na konkretnych odcinkach aby uzyskać oczekiwany czas
+                na całym dystansie</p>
+        </div>
+        <div class="app-body"> <label for="distance">Cały dystans:</label>
+            <select id="distance">
+                <option value="0" disabled selected>- wybierz dystans -</option>
+                <option value="300">300m</option>
+                <option value="400">400m</option>
+                <option value="500">500m</option>
+                <option value="600">600m</option>
+                <option value="800">800m</option>
+                <option value="1000">1000m</option>
+                <option value="1500">1500m</option>
+                <option value="2000">2000m</option>
+                <option value="3000">3000m</option>
+                <option value="5000">5000m</option>
+                <option value="10000">10000m</option>
+                <option value="20000">20000m</option>
+            </select>
+
+            <table class="time">
+                <tr>
+                    <td><label for="hours">Godziny:</label></td>
+                    <td><label for="minutes">Minuty:</label></td>
+                    <td><label for="seconds">Sekundy:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="hours" min="0" max="59" value="0" placeholder="00"></td>
+                    <td><input type="number" id="minutes" min="0" max="59" value="0" placeholder="00"></td>
+                    <td><input type="number" id="seconds" min="0" max="59" value="0" placeholder="00"></td>
+                </tr>
+            </table>
+
+            <label for="lap-distance">Dystans dla którego chcesz obliczyć międzyczasy:</label>
+            <select id="lap-distance">
+                <option value="0" disabled selected>- wybierz dystans -</option>
+                <option value="100">100m</option>
+                <option value="200">200m</option>
+                <option value="400">400m</option>
+                <option value="1000">1000m</option>
+                <option value="5000">5000m</option>
+            </select>
+        </div>
+
+        <div class="results">
+            <p class="result"></p>
+            <p class="error"></p>
+            <div class="btns">
+                <button class="calc-btn">Oblicz</button>
+                <button class="reset-btn">Wyczyść</button>
+            </div>
+        </div>
+    </div>
+    <script src="./scirpt.js"></script>
+</body>
+
+</html>

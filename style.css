@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--main-color: rgb(134, 228, 111);
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Nunito', sans-serif;
+	background-color: #222;
+	background: linear-gradient(
+		315deg,
+		rgba(179, 213, 170, 1) 38%,
+		rgba(97, 145, 104, 1) 100%
+	);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	height: 800px;
+	padding: 50px;
+	text-align: center;
+	background-color: #333;
+	color: #ddd;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 0 0 30px black;
+}
+
+.wrapper h1 {
+	text-transform: uppercase;
+	font-size: 42px;
+	color: var(--main-color);
+}
+
+.description {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+.app-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 300px;
+	margin-top: 20px;
+}
+
+label {
+	margin: 20px 0 10px 0;
+	font-size: 22px;
+}
+
+select,
+input {
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: #ddd;
+}
+
+select {
+	cursor: pointer;
+}
+
+input {
+	text-align: center;
+}
+
+.time {
+	margin-top: 20px;
+	width: 100%;
+}
+
+button {
+	padding: 20px 40px;
+	margin-bottom: 20px;
+	margin-left: 8px;
+	width: 200px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: var(--main-color);
+	color: #333;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: scale 0.3s;
+}
+
+button:hover {
+	background-color: #292323;
+	color: #ddd;
+	scale: 0.95;
+}
+
+.result {
+	visibility: hidden;
+	font-size: 22px;
+	margin-top: 40px;
+	height: 20px;
+}
+
+.error {
+	visibility: hidden;
+	margin-top: 5px;
+	font-size: 18px;
+	height: 20px;
+	color: rgb(221, 96, 73);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.marked-result {
+	color: var(--main-color);
+}
+
+.btns {
+	margin-top: 80px;
+}
+
+@media (max-width: 576px) {
+	.wrapper {
+		padding: 40px 20px;
+		height: 100%;
+		width: 100%;
+		border-radius: 0px;
+	}
+	.wrapper h1 {
+		font-size: 34px;
+	}
+
+	.description {
+		font-size: 22px;
+	}
+	label {
+		font-size: 22px;
+		margin: 30px 0 5px 0;
+	}
+	.btns {
+		margin-top: 140px;
+	}
+}
