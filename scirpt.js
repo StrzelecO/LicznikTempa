@@ -53,11 +53,11 @@ const calculate = () => {
 	if (resultInSeconds < 60) {
 		finalResult = resultInSeconds.toFixed(2);
 	} else if (resultInSeconds < 3600) {
-		finalResult = `${(resultInSeconds / 60).toFixed(0)}m ${(
+		finalResult = `${Math.floor(resultInSeconds / 60)}m ${(
 			resultInSeconds % 60
 		).toFixed(0)}`;
 	} else {
-		finalResult = `${(resultInSeconds / 3600).toFixed(0)}h ${(
+		finalResult = `${Math.floor(resultInSeconds / 3600)}h ${(
 			resultInSeconds % 60
 		).toFixed(0)}m ${(resultInSeconds % 3600).toFixed(0)}`;
 	}
